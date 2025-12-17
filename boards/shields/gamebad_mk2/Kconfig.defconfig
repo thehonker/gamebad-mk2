@@ -1,12 +1,15 @@
 if SHIELD_GAMEBAD_MK2
 
 config ZMK_KEYBOARD_NAME
-  default "gamebad_mk2"
+  default "Gamebad Mk2"
 
 config SPI
   default y
 
 config GPIO_595
+  default y
+
+config ZMK_USB
   default y
 
 endif
