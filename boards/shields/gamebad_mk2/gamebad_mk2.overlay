@@ -60,24 +60,24 @@
 };
 
 &xiao_spi {
+  status = "okay";
+  cs-gpios = <&xiao_d 0 GPIO_ACTIVE_LOW &xiao_d 1 GPIO_ACTIVE_LOW>;
+  shifter_0: 595@0 {
+    compatible = "zmk,gpio-595";
     status = "okay";
-    cs-gpios = <&xiao_d 0 GPIO_ACTIVE_LOW &xiao_d 1 GPIO_ACTIVE_LOW>;
-    shifter_0: 595@0 {
-        compatible = "zmk,gpio-595";
-        status = "okay";
-        gpio-controller;
-        spi-max-frequency = <200000>;
-        reg = <0>;
-        #gpio-cells = <2>;
-        ngpios = <8>;
-    };
-    shifter_1: 595@1 {
-        compatible = "zmk,gpio-595";
-        status = "okay";
-        gpio-controller;
-        spi-max-frequency = <200000>;
-        reg = <0>;
-        #gpio-cells = <2>;
-        ngpios = <8>;
-    };
+    gpio-controller;
+    spi-max-frequency = <100000>;
+    reg = <0>;
+    #gpio-cells = <2>;
+    ngpios = <8>;
+  };
+  shifter_1: 595@1 {
+    compatible = "zmk,gpio-595";
+    status = "okay";
+    gpio-controller;
+    spi-max-frequency = <100000>;
+    reg = <0>;
+    #gpio-cells = <2>;
+    ngpios = <8>;
+  };
 };
