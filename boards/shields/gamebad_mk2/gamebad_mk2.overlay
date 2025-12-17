@@ -7,28 +7,28 @@
     wakeup-source;
 
     col-gpios
-      = <&shifter_0 7 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 6 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 5 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 4 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 3 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 2 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 1 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 7 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 6 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 5 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 4 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 3 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 2 GPIO_ACTIVE_HIGH>
       , <&shifter_1 1 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 2 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 3 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 4 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 5 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 6 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 7 GPIO_ACTIVE_HIGH> // not a typo, more of a physical fuckup
+      = <&shifter_0 1 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 2 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 3 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 4 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 5 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 6 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 7 GPIO_ACTIVE_HIGH> // not a typo either
     ;
 
     row-gpios
-      = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-      , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-      , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+      = <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
       , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-      , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+      , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+      , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+      , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
     ;
   };
 
