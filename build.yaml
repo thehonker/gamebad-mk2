@@ -19,5 +19,5 @@
 #
 ---
 include:
-- board: seeed_xiao
+- board: xiao_ble
   shield: gamebad_mk2
