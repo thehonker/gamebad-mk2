@@ -2,10 +2,7 @@
 include:
 - board: xiao_ble
   shield: gamebad_mk2
-  snippet: zmk-usb-logging
 - board: xiao_ble
   shield: tester_xiao
-  snippet: zmk-usb-logging
 - board: xiao_ble
   shield: settings_reset
-  snippet: zmk-usb-logging
