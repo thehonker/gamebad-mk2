@@ -2,3 +2,5 @@
 include:
 - board: xiao_ble
   shield: gamebad_mk2
+- board: xiao_ble
+  shield: tester_xiao
