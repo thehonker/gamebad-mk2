@@ -1,4 +1,6 @@
 if SHIELD_GAMEBAD_MK2
-  config ZMK_KEYBOARD_NAME
-    default "Gamebad Mk2"
+config ZMK_KEYBOARD_NAME
+  default "Gamebad Mk2"
+config USB_DEVICE_MANUFACTURER
+  default "TheHonker"
 endif
