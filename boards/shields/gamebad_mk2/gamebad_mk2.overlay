@@ -61,17 +61,8 @@
 
 &xiao_spi {
     status = "okay";
-    cs-gpios = <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) &xiao_d 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    cs-gpios = <&xiao_d 9 GPIO_ACTIVE_LOW>;
     shifter_0: 595@0 {
-        compatible = "zmk,gpio-595";
-        status = "okay";
-        gpio-controller;
-        spi-max-frequency = <200000>;
-        reg = <0>;
-        #gpio-cells = <2>;
-        ngpios = <8>;
-    };
-    shifter_1: 595@1 {
         compatible = "zmk,gpio-595";
         status = "okay";
         gpio-controller;
