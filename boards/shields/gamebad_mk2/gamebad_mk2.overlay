@@ -59,7 +59,7 @@
 
 &xiao_spi {
     status = "okay";
-    cs-gpios = <&xiao_d 9 GPIO_ACTIVE_LOW &xiao_d 7 GPIO_ACTIVE_LOW>;
+    cs-gpios = <&xiao_d 9 GPIO_ACTIVE_LOW | GPIO_PULL_UP &xiao_d 7 GPIO_ACTIVE_LOW | GPIO_PULL_UP>;
     shifter_0: 595@0 {
         compatible = "zmk,gpio-595";
         status = "okay";
