@@ -1,14 +1,9 @@
 if SHIELD_GAMEBAD_MK2
-  config ZMK_KEYBOARD_NAME
-    default "Gamebad Mk2"
-  config SPI
-    default y
-  config GPIO_595
-    default y
+  config ZMK_KEYBOARD_NAME "Gamebad Mk2"
+  config SPI y
+  config GPIO_595 y
 endif
 
-config ZMK_USB
-  default y
-
-config LOG_PROCESS_THREAD_STARTUP_DELAY_MS
-  default 80000
+config ZMK_USB y
+config LOG_PROCESS_THREAD_STARTUP_DELAY_MS 80000
+config ZMK_USB_LOGGING y
