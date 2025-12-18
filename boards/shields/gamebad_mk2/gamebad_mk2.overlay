@@ -1,6 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-
-#include "gamebad_mk2-layouts.dtsi"
+#include <physical_layouts.dtsi>
 
 / {
   kscan0: kscan0 {
@@ -9,20 +8,20 @@
     wakeup-source;
     // not a typo, more of a physical fuckup
     col-gpios
-      = <&shifter_1 1 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 1 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 2 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 3 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 4 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 5 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 6 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 7 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 2 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 3 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 4 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 5 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 6 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 7 GPIO_ACTIVE_HIGH>
+      = <&shifter1 1 GPIO_ACTIVE_HIGH>
+      , <&shifter0 1 GPIO_ACTIVE_HIGH>
+      , <&shifter0 2 GPIO_ACTIVE_HIGH>
+      , <&shifter0 3 GPIO_ACTIVE_HIGH>
+      , <&shifter0 4 GPIO_ACTIVE_HIGH>
+      , <&shifter0 5 GPIO_ACTIVE_HIGH>
+      , <&shifter0 6 GPIO_ACTIVE_HIGH>
+      , <&shifter0 7 GPIO_ACTIVE_HIGH>
+      , <&shifter1 2 GPIO_ACTIVE_HIGH>
+      , <&shifter1 3 GPIO_ACTIVE_HIGH>
+      , <&shifter1 4 GPIO_ACTIVE_HIGH>
+      , <&shifter1 5 GPIO_ACTIVE_HIGH>
+      , <&shifter1 6 GPIO_ACTIVE_HIGH>
+      , <&shifter1 7 GPIO_ACTIVE_HIGH>
     ;
 
     row-gpios
@@ -34,7 +33,7 @@
     ;
   };
 
-  keymap_transform0: keymap_transform0 {
+  default_transform: keymap_transform0 {
     compatible = "zmk,matrix-transform";
     columns = <14>;
     rows = <5>;
@@ -47,6 +46,13 @@
     >;
   };
 
+  physical_layout0: physical_layout_0 {
+    compatible = "zmk,physical-layout";
+    display-name = "Default Layout";
+    kscan = <&kscan0>;
+    transform = <&default_transform>;
+  };
+
   chosen {
     zmk,physical-layout = &physical_layout0;
   };
@@ -55,7 +61,7 @@
 &xiao_spi {
   status = "okay";
   cs-gpios = <&xiao_d 0 GPIO_ACTIVE_LOW>, <&xiao_d 1 GPIO_ACTIVE_LOW>;
-  shifter_0: 595@0 {
+  shifter0: 595@0 {
     compatible = "zmk,gpio-595";
     status = "okay";
     gpio-controller;
@@ -64,7 +70,7 @@
     #gpio-cells = <2>;
     ngpios = <8>;
   };
-  shifter_1: 595@1 {
+  shifter1: 595@1 {
     compatible = "zmk,gpio-595";
     status = "okay";
     gpio-controller;

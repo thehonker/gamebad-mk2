@@ -3,6 +3,8 @@ id: gamebad_mk2
 name: "Gamebad Mk2"
 type: shield
 url: https://github.com/thehonker/gamebad-mk2
-requires: [seeed_xiao]
+requires:
+- seeed_xiao
+exposes: []
 features:
-  - keys
+- keys

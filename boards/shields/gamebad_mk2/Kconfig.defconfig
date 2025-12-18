@@ -3,4 +3,14 @@ config ZMK_KEYBOARD_NAME
   default "Gamebad Mk2"
 config USB_DEVICE_MANUFACTURER
   default "TheHonker"
+config SPI
+  default y
+config GPIO_595
+  default y
+config ZMK_USB
+  default y
+config ZMK_BATTERY_REPORTING
+  default y
+config ZMK_BLE
+  default y
 endif
