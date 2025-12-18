@@ -9,20 +9,20 @@
     wakeup-source;
     // not a typo, more of a physical fuckup
     col-gpios
-      = <&shifter_1 7 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 6 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 5 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 4 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 3 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 2 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 7 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 6 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 5 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 4 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 3 GPIO_ACTIVE_HIGH>
-      , <&shifter_0 2 GPIO_ACTIVE_HIGH>
+      = <&shifter_1 1 GPIO_ACTIVE_HIGH>
       , <&shifter_0 1 GPIO_ACTIVE_HIGH>
-      , <&shifter_1 1 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 2 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 3 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 4 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 5 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 6 GPIO_ACTIVE_HIGH>
+      , <&shifter_0 7 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 2 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 3 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 4 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 5 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 6 GPIO_ACTIVE_HIGH>
+      , <&shifter_1 7 GPIO_ACTIVE_HIGH>
     ;
 
     row-gpios
@@ -54,12 +54,12 @@
 
 &xiao_spi {
   status = "okay";
-  cs-gpios = <&xiao_d 0 GPIO_ACTIVE_LOW &xiao_d 1 GPIO_ACTIVE_LOW>;
+  cs-gpios = <&xiao_d 0 GPIO_ACTIVE_LOW>, <&xiao_d 1 GPIO_ACTIVE_LOW>;
   shifter_0: 595@0 {
     compatible = "zmk,gpio-595";
     status = "okay";
     gpio-controller;
-    spi-max-frequency = <200000>;
+    spi-max-frequency = <125000>;
     reg = <0>;
     #gpio-cells = <2>;
     ngpios = <8>;
@@ -68,8 +68,8 @@
     compatible = "zmk,gpio-595";
     status = "okay";
     gpio-controller;
-    spi-max-frequency = <200000>;
-    reg = <0>;
+    spi-max-frequency = <125000>;
+    reg = <1>;
     #gpio-cells = <2>;
     ngpios = <8>;
   };
