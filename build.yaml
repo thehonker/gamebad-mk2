@@ -2,5 +2,10 @@
 include:
 - board: xiao_ble
   shield: gamebad_mk2
+  cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+- board: nrf52840dk/nrf52840
+  shield: gamebad_mk2_dongle
 - board: xiao_ble
+  shield: settings_reset
+- board: nrf52840dk/nrf52840
   shield: settings_reset
