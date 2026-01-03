@@ -1,4 +1,5 @@
 if SHIELD_GAMEBAD_MK2_DONGLE
+
 config ZMK_KEYBOARD_NAME
   default "Gamebad Mk2"
 config USB_DEVICE_MANUFACTURER
@@ -6,6 +7,7 @@ config USB_DEVICE_MANUFACTURER
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+
 config ZMK_SPLIT
     default y
 
